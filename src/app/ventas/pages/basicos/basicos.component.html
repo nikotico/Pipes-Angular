@@ -1,0 +1,74 @@
+<h4>Pipes incluidos en CommonModule - Angular</h4>
+<div>
+    <h1>Pipes Basicos</h1>
+    <p>
+        Los pipes solo modifican las variables de manera visual pero, las variables siguen teniendo el mismo valor de inicio
+    </p>
+</div>
+
+<!-- Uso de primeFlex -->
+<div class="grid">
+    <div class="col-4">
+        <p-card header="uppercase" [subheader]="nombreLower | uppercase">
+            <!-- las llaves [] apuntan a una variable o funcion del component -->
+            {{nombreLower | uppercase}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Lowercase" [subheader]="nombreLower | lowercase">
+            {{nombreLower| lowercase}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Titlecase" [subheader]="nombreCompleto | titlecase">
+            {{nombreCompleto| titlecase}}
+        </p-card>
+    </div>
+</div>
+
+<div>
+    <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipes para fechas
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-6">
+        <p-card header="Pipe" >
+            <ul>
+                <li>fecha</li>
+                <li>fecha | date </li>
+                <li>fecha | date:'short' </li>
+                <li>fecha | date:'long' </li>
+                <li>fecha | date:'MM' </li>
+                <li>fecha | date:'MMMM dd, yyyy' </li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li>fecha | date:'long' : 'GMT-5' </li>
+                <li>fecha | date:'long' : '' : 'en' </li>
+            </ul>
+            
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card header="Como se ve">
+            <ul>
+                <li>{{fecha}}</li>
+                <li>{{fecha | date}} </li>
+                <li>{{fecha | date:'short'}} </li>
+                <li>{{fecha | date:'long'}} </li>
+                <li>{{fecha | date:'MM'}} </li>
+                <li>{{fecha | date:'MMMM dd, yyyy'}} </li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li>{{fecha | date:'long' : 'GMT-5' }} </li>
+                <li>{{fecha | date:'long' : '' : 'en' }} </li>
+            </ul>
+        </p-card>
+    </div>
+</div>
